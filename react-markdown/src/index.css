@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+
+body{
+  overflow: hidden;
+}
+
+.sidebar-open {
+  transform: translateX(0);
+}
+
+.sidebar-close {
+  transform: translate(-100%);
+}
+
+.dlt-btn svg {
+  fill: #7c8187;
+}
+
+.dlt-btn svg:hover {
+  fill: #e46643;
+}
+
+.h-desktop {
+  height: calc(100vh - 72px);
+}
+
+.h-mobile{
+  height: calc(100vh - 56px);
+}
+
+.h-desktop-0 , .h-mobile-0 , .text-editor-desktop-0 , .text-editor-mobile-0{
+  height: 0;
+}
+
+.text-editor-desktop {
+  height: calc(100vh - 132px);
+  width: 100%;
+  resize: none;
+  outline: none;
+  padding: 8px 16px;
+}
+
+.text-editor-mobile {
+  height: calc(100vh - 110px);
+  width: 100%;
+  resize: none;
+  outline: none;
+  padding: 8px 16px;
+}
+
+.preview-markdown {
+  height: calc(100vh - 132px);
+  padding: 8px 16px;
+  overflow-y: auto;
+  @apply font-mono;
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+.preview-markdown :is(h1, h2, h3, h4, h5, h6) {
+  @apply font-bold;
+  @apply mb-5;
+}
+
+.preview-markdown-dark :is(h1, h2, h3, h4, h5, h6) {
+  @apply text-white;
+}
+
+h1 {
+  font-size: 2.125rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.625rem;
+}
+
+h4 {
+  font-size: 1.375rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1.125rem;
+  @apply text-[#e46643];
+}
+
+.preview-markdown-light :is(p, li) {
+  line-height: 24px;
+  @apply text-gray-500;
+  @apply mb-5 text-sm;
+  @apply font-serif;
+  @apply font-normal;
+}
+
+.preview-markdown-dark :is(p, li) {
+  line-height: 24px;
+  @apply text-gray-300;
+  @apply mb-5 text-sm;
+  @apply font-serif;
+  @apply font-normal;
+}
+
+.preview-markdown :is(p) {
+  line-height: 24px;
+  @apply mb-5;
+}
+
+.preview-markdown :is(ol, ul) {
+  @apply mb-5 ml-6;
+}
+
+.preview-markdown ol li {
+  @apply list-decimal;
+}
+
+.preview-markdown ul li {
+  @apply list-disc;
+}
+
+.preview-markdown ul li::marker {
+  @apply text-[#e46643];
+}
+
+.preview-markdown code {
+  @apply text-gray-700;
+  @apply font-mono;
+  @apply text-sm;
+  @apply whitespace-pre-wrap;
+}
+
+.preview-markdown-dark code {
+  @apply text-white;
+}
+
+.preview-markdown blockquote {
+  @apply bg-neutral-300;
+  @apply flex items-center p-6 mb-5;
+  @apply border-l-4;
+  @apply border-[#e46643];
+  @apply rounded-sm;
+}
+
+.preview-markdown-dark blockquote {
+  @apply bg-[#2b2d31];
+}
+
+.preview-markdown blockquote p {
+  @apply mb-0 text-neutral-900;
+  @apply font-bold;
+}
+
+.preview-markdown-dark blockquote p {
+  @apply text-neutral-100;
+}
+
+.preview-markdown a {
+  @apply underline-offset-2;
+  @apply underline;
+}
+
+.preview-markdown pre {
+  @apply bg-neutral-300;
+  @apply p-6 mb-5;
+}
+
+.preview-markdown-dark pre {
+  @apply bg-[#2b2d31];
+}
